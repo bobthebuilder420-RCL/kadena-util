@@ -16,7 +16,7 @@ def get_peer_list(old_list_with_heights):
         else:
             return len(sort_order)
 
-    items = requests.get('https://us-e1.chainweb.com/chainweb/0.0/mainnet01/cut/peer').json()['items']
+    items = requests.get('https://kadena421.taonacoin.com/chainweb/0.0/mainnet01/cut/peer').json()['items']
     items = [(host['address']['hostname'], host['address']['port'])
              for host in items]
     items.sort(key=sort_func)
